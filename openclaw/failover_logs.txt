@@ -1,0 +1,5 @@
+2026-10-30T19:38:02.221+00:00 [agent/embedded] embedded run agent end: isError=true model=failover-test-missing provider=ollama rawError=404 {"error":"model 'failover-test-missing' not found"}
+2026-10-30T19:38:02.276+00:00 [agent/embedded] embedded run failover decision: decision=fallback_model reason=model_not_found from=ollama/failover-test-missing
+2026-10-30T19:38:02.304+00:00 [model-fallback/decision] decision=candidate_failed requested=ollama/failover-test-missing candidate=ollama/failover-test-missing reason=model_not_found next=ollama/qwen3:0.6b
+2026-10-30T19:39:31.627+00:00 [model-fallback/decision] decision=candidate_succeeded requested=ollama/failover-test-missing candidate=ollama/qwen3:0.6b reason=unknown next=none
+2026-10-30T19:39:31.630+00:00 [model-fallback] Model "ollama/failover-test-missing" not found. Fell back to "ollama/qwen3:0.6b".
