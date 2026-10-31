@@ -1,0 +1,29 @@
+@'
+{
+  "agents": {
+    "entries": {
+      "main": {
+        "model": {
+          "primary": "ollama/qwen3:1.7b",
+          "fallbacks": ["ollama/qwen3:0.6b"]
+        }
+      },
+      "log-analyst": {
+        "model": {
+          "primary": "ollama/qwen3:1.7b",
+          "fallbacks": ["ollama/qwen3:0.6b"]
+        }
+      },
+      "ux-reviewer": {
+        "model": {
+          "primary": "ollama/qwen3:1.7b",
+          "fallbacks": ["ollama/qwen3:0.6b"]
+        }
+      }
+    }
+  }
+}
+'@ | docker exec -i openclaw node dist/index.js config patch --stdin
+
+
+docker exec openclaw node dist/index.js config get agents.entries

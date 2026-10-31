@@ -1,0 +1,68 @@
+@'
+## Log Analysis Priority
+
+The coordinator provides all text needed for analysis.
+Do not call sessions_list or any other tool.
+Do not search for sessions or files.
+Analyze the supplied log text immediately.
+If the log contains an HTTP 500 error, report the server error.
+Do not invent endpoints, causes, or user actions.
+Return findings directly to the coordinator.
+'@ | docker exec -i openclaw sh -c 'for f in /home/node/.openclaw/workspace-log-analyst/AGENTS.md /home/node/.openclaw/workspace-ux-reviewer/AGENTS.md; do cat >> "$f"; done'
+
+READONLY mode to avoid looking for usable tools.
+
+@'
+{
+  "tools": {
+    "fs": {
+      "workspaceOnly": true
+    }
+  },
+  "agents": {
+    "entries": {
+      "main": {
+        "tools": {
+          "allow": [
+            "sessions_spawn",
+            "agents_list",
+            "agents_wait",
+            "sessions_yield",
+            "sessions_list",
+            "sessions_history",
+            "session_status",
+            "read"
+          ]
+        }
+      },
+      "log-analyst": {
+        "tools": {
+          "profile": "coding",
+          "allow": ["read"]
+        }
+      },
+      "ux-reviewer": {
+        "tools": {
+          "profile": "coding",
+          "allow": ["read"]
+        }
+      }
+    }
+  }
+}
+'@ | docker exec -i openclaw node dist/index.js config patch --stdin
+
+
+trying to control multi interractions:
+@'
+{
+  "agents": {
+    "defaults": {
+      "maxConcurrent": 2,
+      "subagents": {
+        "maxConcurrent": 1
+      }
+    }
+  }
+}
+'@ | docker exec -i openclaw node dist/index.js config patch --stdin

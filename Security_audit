@@ -1,0 +1,53 @@
+docker exec openclaw node dist/index.js security audit
+
+fixes:
+
+openclaw webtools switchoff:
+
+@'
+{
+  "tools": {
+    "deny": [
+      "group:web",
+      "browser",
+      "web_search",
+      "web_fetch"
+    ]
+  }
+}
+'@ | docker exec -i openclaw node dist/index.js config patch --stdin
+
+gateway auth rate limit:
+
+@'
+{
+  "gateway": {
+    "auth": {
+      "rateLimit": {
+        "maxAttempts": 10,
+        "windowMs": 60000,
+        "lockoutMs": 300000
+      }
+    }
+  }
+}
+'@ | docker exec -i openclaw node dist/index.js config patch --stdin
+
+agent to agent visibility:
+
+@'
+{
+  "tools": {
+    "sessions": {
+      "visibility": "tree"
+    },
+    "agentToAgent": {
+      "enabled": false
+    }
+  }
+}
+'@ | docker exec -i openclaw node dist/index.js config patch --stdin
+
+
+
+docker exec openclaw node dist/index.js security audit --deep

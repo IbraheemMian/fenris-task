@@ -1,0 +1,19 @@
+@'
+{
+  "agents": {
+    "entries": {
+      "main": {
+        "model": {
+          "primary": "ollama/failover-test-missing",
+          "fallbacks": ["ollama/qwen3:0.6b"]
+        }
+      }
+    }
+  }
+}
+'@ | docker exec -i openclaw sh -c 'cat > /tmp/failover-test.json && node dist/index.js config patch --file /tmp/failover-test.json --dry-run'
+
+docker exec openclaw node dist/index.js config patch --file /tmp/failover-test.json
+
+Restore the original configuration for the main agent:
+docker exec openclaw node dist/index.js config set agents.entries.main.model.primary ollama/qwen3:1.7b
