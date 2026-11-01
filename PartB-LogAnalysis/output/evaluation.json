@@ -80,31 +80,43 @@
     },
     "v2": {
       "totals": {
-        "hits": 0,
-        "misses": 2,
-        "false_alarms": 0
+        "hits": 1,
+        "misses": 1,
+        "false_alarms": 2
       },
       "windows": [
         {
           "window": "window_1",
-          "hits": [],
-          "misses": [
+          "hits": [
             {
-              "category": "technical",
-              "evidence": [
-                31,
-                36
-              ]
+              "title": "Labeled incident",
+              "category": "technical"
             }
           ],
-          "false_alarms": [],
+          "misses": [],
+          "false_alarms": [
+            {
+              "title": "Repeated screen view events",
+              "evidence": [
+                5,
+                10,
+                15,
+                21,
+                37,
+                38
+              ],
+              "category": "ux"
+            }
+          ],
           "counts": {
-            "hits": 0,
-            "misses": 1,
-            "false_alarms": 0
+            "hits": 1,
+            "misses": 0,
+            "false_alarms": 1
           },
           "warnings": [
-            "Window 1: no usable model response: Invalid model JSON: Expecting ',' delimiter"
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal",
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal",
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal"
           ]
         },
         {
@@ -125,21 +137,40 @@
             "false_alarms": 0
           },
           "warnings": [
-            "Window 1: no usable model response: Invalid model JSON: Expecting ',' delimiter"
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal",
+            "Window 1: discarded finding: Evidence must be nonempty integer line numbers",
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal",
+            "Window 1: discarded finding: Evidence must be nonempty integer line numbers"
           ]
         },
         {
           "window": "window_3",
           "hits": [],
           "misses": [],
-          "false_alarms": [],
+          "false_alarms": [
+            {
+              "title": "Repeated screen view events with long load times",
+              "evidence": [
+                3281,
+                3288,
+                3303,
+                3304,
+                3313,
+                3318
+              ],
+              "category": "ux"
+            }
+          ],
           "counts": {
             "hits": 0,
             "misses": 0,
-            "false_alarms": 0
+            "false_alarms": 1
           },
           "warnings": [
-            "Window 1: no usable model response: Invalid model JSON: Expecting ',' delimiter"
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal",
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal",
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal",
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal"
           ]
         }
       ]
