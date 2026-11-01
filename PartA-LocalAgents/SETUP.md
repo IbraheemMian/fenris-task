@@ -1,5 +1,8 @@
 # fenris-task
-Local AI Agents using openClaw and ollama.
+
+# Setting-UP Local agent
+
+Local AI Agents using openClaw and ollama. The 'openclaw.json' is splited in 3 subparts as 'agentSetups_*' containg all the configs and partailly in powershell while agent setup.
 
 To setup openclaw and ollama on clean machine use the Power shell file, first setup ollama and then openclaw. 
 
