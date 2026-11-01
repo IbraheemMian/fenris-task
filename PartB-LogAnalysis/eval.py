@@ -42,7 +42,7 @@ def compare(predictions: list[dict], gold: list[dict]) -> dict:
                                  "category": found["category"]})
         else:
             matched.add(target)
-            hits.append({"title": gold[target]["title"], "category": gold[target]["category"]})
+            hits.append({"title": gold[target].get("title", "Labeled incident"), "category": gold[target]["category"]})
     misses = [g for i, g in enumerate(gold) if i not in matched]
     return {"hits": hits, "misses": misses, "false_alarms": false_alarms,
             "counts": {"hits": len(hits), "misses": len(misses), "false_alarms": len(false_alarms)}}
