@@ -45,9 +45,9 @@ docker network connect ai-network ollama
 
 Using Docker to run OpenClaw on Windows:
 
-$token = [guid]::NewGuid().ToString("N")
-$token | Set-Content "$HOME\.openclaw-gateway-token"
-$token = (Get-Content "$HOME\.openclaw-gateway-token" -Raw).Trim()
+# $token = [guid]::NewGuid().ToString("N")
+# $token | Set-Content "$HOME\.openclaw-gateway-token"
+# $token = (Get-Content "$HOME\.openclaw-gateway-token" -Raw).Trim()
 
 docker volume create openclaw
 

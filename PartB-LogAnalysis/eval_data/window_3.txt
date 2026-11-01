@@ -1,0 +1,40 @@
+L3281: 2026-09-14T16:51:20.435Z INFO  client-android user=u_4669 sess=s_90398 event=screen_view screen=alerts load_ms=402 app_version=3.4.1
+L3282: 2026-09-14T16:51:42.430Z INFO  api            req=a6993f user=u_1554 sess=s_32238 GET /api/v1/dashboard status=200 latency_ms=401
+L3283: 2026-09-14T16:52:00.345Z INFO  healthcheck    GET /healthz status=200 latency_ms=6
+L3284: 2026-09-14T16:52:01.190Z INFO  sensor-gw      device=esp32-39 msgs=22 last_seen_s=5
+L3285: 2026-09-14T16:52:20.552Z INFO  sensor-gw      device=esp32-19 msgs=9 last_seen_s=9
+L3286: 2026-09-14T16:52:38.418Z INFO  api            req=0f79c4 user=u_3920 sess=s_83170 GET /api/v1/dashboard status=200 latency_ms=481
+L3287: 2026-09-14T16:52:46.883Z INFO  sensor-gw      device=esp32-34 msgs=29 last_seen_s=3
+L3288: 2026-09-14T16:52:59.107Z INFO  client-web     user=u_3773 sess=s_60559 event=screen_view screen=settings load_ms=1576
+L3289: 2026-09-14T16:53:00.259Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+L3290: 2026-09-14T16:53:11.357Z INFO  api            req=a2ff90 user=u_3031 sess=s_90326 POST /api/v1/login status=200 latency_ms=105
+L3291: 2026-09-14T16:53:21.886Z INFO  client-web     user=u_4521 sess=s_26218 event=screen_view screen=device_list load_ms=963
+L3292: 2026-09-14T16:53:43.966Z INFO  api            req=7a7fa6 user=u_4427 sess=s_34050 GET /api/v1/me status=200 latency_ms=67
+L3293: 2026-09-14T16:54:00.283Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+L3294: 2026-09-14T16:54:01.206Z INFO  sensor-gw      device=esp32-33 msgs=23 last_seen_s=2
+L3295: 2026-09-14T16:54:07.212Z INFO  api            req=cf0477 user=u_4799 sess=s_55331 GET /api/v1/devices/esp32-43/readings?range=7d status=200 latency_ms=1021
+L3296: 2026-09-14T16:54:27.446Z INFO  sensor-gw      device=esp32-19 msgs=7 last_seen_s=4
+L3297: 2026-09-14T16:54:33.358Z INFO  sensor-gw      device=esp32-22 msgs=17 last_seen_s=5
+L3298: 2026-09-14T16:54:42.998Z INFO  client-android user=u_5750 sess=s_96657 event=screen_view screen=device_detail load_ms=363 app_version=3.4.1
+L3299: 2026-09-14T16:54:48.840Z INFO  api            req=fe8172 user=u_1990 sess=s_64976 PATCH /api/v1/devices/esp32-36/settings status=200 latency_ms=71
+L3300: 2026-09-14T16:55:00.243Z INFO  healthcheck    GET /healthz status=200 latency_ms=1
+L3301: 2026-09-14T16:55:01.000Z INFO  db             pool=main active=20/50 wait_ms=0
+L3302: 2026-09-14T16:55:02.219Z INFO  sensor-gw      device=esp32-31 msgs=20 last_seen_s=6
+L3303: 2026-09-14T16:55:07.798Z INFO  client-web     user=u_1116 sess=s_45958 event=screen_view screen=dashboard load_ms=1266
+L3304: 2026-09-14T16:55:24.344Z INFO  client-ios     user=u_4546 sess=s_68527 event=screen_view screen=dashboard load_ms=1229 app_version=3.4.1
+L3305: 2026-09-14T16:55:37.126Z INFO  api            req=053e71 user=u_4815 sess=s_70238 GET /api/v1/devices/esp32-40/readings?range=7d status=200 latency_ms=1036
+L3306: 2026-09-14T16:55:55.825Z INFO  sensor-gw      device=esp32-40 msgs=8 last_seen_s=1
+L3307: 2026-09-14T16:56:00.317Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+L3308: 2026-09-14T16:56:06.031Z INFO  api            req=5a6a22 user=u_2014 sess=s_42836 GET /api/v1/alerts status=200 latency_ms=119
+L3309: 2026-09-14T16:56:23.236Z INFO  api            req=1b71e2 user=u_4500 sess=s_89002 GET /api/v1/me status=200 latency_ms=38
+L3310: 2026-09-14T16:56:31.930Z INFO  api            req=c2986d user=u_2901 sess=s_14092 PATCH /api/v1/devices/esp32-37/settings status=200 latency_ms=200
+L3311: 2026-09-14T16:56:50.636Z INFO  sensor-gw      device=esp32-30 msgs=12 last_seen_s=8
+L3312: 2026-09-14T16:57:00.262Z INFO  healthcheck    GET /healthz status=200 latency_ms=4
+L3313: 2026-09-14T16:57:06.769Z INFO  client-web     user=u_1570 sess=s_95536 event=screen_view screen=device_list load_ms=1441
+L3314: 2026-09-14T16:57:22.362Z INFO  client-web     user=u_2610 sess=s_18656 event=screen_view screen=device_list load_ms=750
+L3315: 2026-09-14T16:57:36.887Z INFO  api            req=00404e user=u_1032 sess=s_62661 POST /api/v1/login status=200 latency_ms=162
+L3316: 2026-09-14T16:57:57.268Z INFO  api            req=271834 user=u_3868 sess=s_75067 GET /api/v1/devices status=200 latency_ms=1901
+L3317: 2026-09-14T16:58:00.034Z INFO  healthcheck    GET /healthz status=200 latency_ms=1
+L3318: 2026-09-14T16:58:09.487Z INFO  client-ios     user=u_5017 sess=s_58641 event=screen_view screen=dashboard load_ms=665 app_version=3.4.1
+L3319: 2026-09-14T16:58:27.752Z INFO  api            req=010b08 user=u_2150 sess=s_62184 GET /api/v1/devices/esp32-07/readings?range=7d status=200 latency_ms=621
+L3320: 2026-09-14T16:58:45.004Z INFO  api            req=60aaa3 user=u_1623 sess=s_33625 GET /api/v1/alerts status=200 latency_ms=140

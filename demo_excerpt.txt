@@ -1,0 +1,48 @@
+798: 2026-09-14T10:12:40.200Z WARN  db             slow_query ms=14211 query="SELECT * FROM readings WHERE device_id IN (...) ORDER BY ts" caller=reports.export
+799: 2026-09-14T10:12:45.173Z INFO  api            req=67fecb user=u_4100 sess=s_68802 GET /api/v1/alerts status=200 latency_ms=48
+800: 2026-09-14T10:12:52.894Z INFO  client-ios     user=u_2643 sess=s_85293 event=screen_view screen=alerts load_ms=1331 app_version=3.4.1
+801: 2026-09-14T10:13:00.123Z INFO  healthcheck    GET /healthz status=200 latency_ms=4
+802: 2026-09-14T10:13:01.000Z WARN  db             pool=main active=49/50 wait_ms=2989
+803: 2026-09-14T10:13:04.516Z WARN  api            req=4a9c39 user=u_5357 sess=s_55367 GET /api/v1/reports/export?format=csv status=504 latency_ms=30000
+804: 2026-09-14T10:13:08.664Z INFO  api            req=e586f6 user=u_2497 sess=s_96505 GET /api/v1/alerts status=200 latency_ms=184
+805: 2026-09-14T10:13:27.063Z INFO  api            req=8fd82e user=u_2529 sess=s_16599 GET /api/v1/devices status=200 latency_ms=64
+806: 2026-09-14T10:13:33.504Z INFO  api            req=130787 user=u_1270 sess=s_19615 PATCH /api/v1/devices/esp32-13/settings status=200 latency_ms=79
+807: 2026-09-14T10:13:43.968Z WARN  api            req=f25ea1 user=u_3815 sess=s_60438 GET /api/v1/reports/export?format=csv status=504 latency_ms=30000
+808: 2026-09-14T10:13:52.900Z INFO  client-android user=u_1256 sess=s_42506 event=screen_view screen=alerts load_ms=1660 app_version=3.4.0
+809: 2026-09-14T10:14:00.045Z INFO  healthcheck    GET /healthz status=200 latency_ms=5
+810: 2026-09-14T10:14:01.000Z WARN  db             pool=main active=50/50 wait_ms=7285
+811: 2026-09-14T10:14:02.974Z INFO  sensor-gw      device=esp32-02 msgs=20 last_seen_s=8
+812: 2026-09-14T10:14:10.291Z INFO  api            req=d14602 user=u_2645 sess=s_96990 GET /api/v1/dashboard status=200 latency_ms=7037
+813: 2026-09-14T10:14:20.708Z INFO  sensor-gw      device=esp32-05 msgs=18 last_seen_s=1
+814: 2026-09-14T10:14:21.900Z INFO  api            req=bfa382 user=u_3576 sess=s_14166 GET /api/v1/reports/export?format=csv status=200 latency_ms=11092
+815: 2026-09-14T10:14:27.433Z INFO  api            req=9872b7 user=u_2599 sess=s_86482 GET /api/v1/dashboard status=200 latency_ms=789
+816: 2026-09-14T10:14:48.219Z INFO  api            req=0ff15d user=u_1438 sess=s_81416 PATCH /api/v1/devices/esp32-09/settings status=200 latency_ms=81
+817: 2026-09-14T10:14:56.131Z INFO  api            req=d82a77 user=u_3925 sess=s_65552 GET /api/v1/devices/esp32-10/readings?range=7d status=200 latency_ms=5160
+818: 2026-09-14T10:15:00.337Z INFO  healthcheck    GET /healthz status=200 latency_ms=5
+819: 2026-09-14T10:15:01.000Z WARN  db             pool=main active=50/50 wait_ms=8896
+820: 2026-09-14T10:15:04.288Z WARN  api            req=cbc274 user=u_1535 sess=s_16068 GET /api/v1/reports/export?format=csv status=504 latency_ms=30000
+821: 2026-09-14T10:15:09.907Z INFO  api            req=61b506 user=u_4680 sess=s_23935 GET /api/v1/devices status=200 latency_ms=201
+822: 2026-09-14T10:15:11.900Z WARN  db             slow_query ms=19876 query="SELECT * FROM readings WHERE device_id IN (...) ORDER BY ts" caller=reports.export
+823: 2026-09-14T10:15:18.357Z INFO  client-android user=u_1351 sess=s_78761 event=screen_view screen=device_list load_ms=1067 app_version=3.4.1
+824: 2026-09-14T10:15:38.316Z INFO  api            req=7dcc90 user=u_1627 sess=s_94146 PATCH /api/v1/devices/esp32-40/settings status=200 latency_ms=214
+825: 2026-09-14T10:15:50.585Z INFO  api            req=d4f50c user=u_5048 sess=s_98847 GET /api/v1/dashboard status=200 latency_ms=4827
+826: 2026-09-14T10:15:50.988Z WARN  api            req=25a652 user=u_5230 sess=s_61010 GET /api/v1/reports/export?format=csv status=504 latency_ms=30000
+827: 2026-09-14T10:15:55.626Z INFO  client-android user=u_1294 sess=s_36523 event=screen_view screen=alerts load_ms=926 app_version=3.4.0
+828: 2026-09-14T10:16:00.032Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+829: 2026-09-14T10:16:01.000Z WARN  db             pool=main active=50/50 wait_ms=5817
+830: 2026-09-14T10:16:02.300Z INFO  client-web     user=u_2201 sess=s_42017 event=tap target=export_csv_button screen=reports
+831: 2026-09-14T10:16:04.100Z INFO  client-web     user=u_2201 sess=s_42017 event=tap target=export_csv_button screen=reports
+832: 2026-09-14T10:16:05.000Z INFO  client-web     user=u_2201 sess=s_42017 event=tap target=export_csv_button screen=reports
+833: 2026-09-14T10:16:05.800Z INFO  client-web     user=u_2201 sess=s_42017 event=tap target=export_csv_button screen=reports
+834: 2026-09-14T10:16:07.200Z INFO  client-web     user=u_2201 sess=s_42017 event=tap target=export_csv_button screen=reports
+835: 2026-09-14T10:16:09.900Z INFO  client-web     user=u_2201 sess=s_42017 event=tap target=export_csv_button screen=reports
+836: 2026-09-14T10:16:10.844Z INFO  api            req=92ae44 user=u_4391 sess=s_66206 GET /api/v1/devices status=200 latency_ms=253
+837: 2026-09-14T10:16:30.895Z INFO  api            req=951042 user=u_4204 sess=s_49991 GET /api/v1/alerts status=200 latency_ms=134
+838: 2026-09-14T10:16:02.600Z WARN  api            req=e1a7c0 user=u_2201 sess=s_42017 GET /api/v1/reports/export?format=csv status=504 latency_ms=30000
+839: 2026-09-14T10:16:33.000Z INFO  client-web     user=u_2201 sess=s_42017 event=error_toast message="Request timed out" screen=reports
+840: 2026-09-14T10:16:37.099Z INFO  api            req=7e3630 user=u_3700 sess=s_62200 GET /api/v1/reports/export?format=csv status=200 latency_ms=14957
+841: 2026-09-14T10:16:37.919Z INFO  api            req=d1bb2a user=u_3621 sess=s_85636 PATCH /api/v1/devices/esp32-33/settings status=200 latency_ms=129
+842: 2026-09-14T10:16:44.682Z INFO  api            req=a8cf16 user=u_2488 sess=s_44500 PATCH /api/v1/devices/esp32-24/settings status=200 latency_ms=105
+843: 2026-09-14T10:16:51.547Z INFO  client-web     user=u_3334 sess=s_24049 event=screen_view screen=dashboard load_ms=599
+844: 2026-09-14T10:17:00.306Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+845: 2026-09-14T10:17:01.000Z WARN  db             pool=main active=50/50 wait_ms=9158

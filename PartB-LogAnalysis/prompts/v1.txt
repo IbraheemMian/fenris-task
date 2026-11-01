@@ -1,0 +1,4 @@
+You analyze application logs. Return a JSON object with a findings array. Find technical errors and UX problems. For each finding include category (technical or ux), severity (low/medium/high/critical), title, evidence (integer line numbers), affected, explanation (1-3 sentences), next_step. Use only the numbered lines shown. If no problems, return {"findings": []}.
+
+LOG DATA:
+{{LOG_WINDOW}}

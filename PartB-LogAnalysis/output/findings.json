@@ -1,0 +1,72 @@
+[
+  {
+    "category": "technical",
+    "severity": "high",
+    "title": "Android Device Pairing Crash",
+    "evidence": [
+      1758
+    ],
+    "affected": "user=u_4674",
+    "explanation": "A NullPointerException occurred during the device pairing process on an Android device, indicating a critical software error in the pairing fragment.",
+    "next_step": "Investigate the root cause of the crash and update the Android app to handle null objects properly.",
+    "id": "F001"
+  },
+  {
+    "category": "technical",
+    "severity": "low",
+    "title": "Unverified device reading data",
+    "evidence": [
+      1850
+    ],
+    "affected": "sensor-gw device=esp32-07",
+    "explanation": "A warning log entry indicates an unverified device reading with skew, suggesting potential data integrity issues but not a confirmed security breach or critical error. The evidence is limited to the skew value, which may indicate a data processing anomaly rather than a full security threat.",
+    "next_step": "Verify device data integrity and ensure proper data validation mechanisms are in place.",
+    "id": "F002"
+  },
+  {
+    "category": "ux",
+    "severity": "low",
+    "title": "User Encounter with Billing Error",
+    "evidence": [
+      2745
+    ],
+    "affected": "user",
+    "explanation": "A user attempting to upgrade to Pro encounters a billing error message, indicating a UI/UX issue where the payment confirmation process is not properly handled.",
+    "next_step": "Improve error handling and user feedback for billing upgrades.",
+    "id": "F003"
+  },
+  {
+    "category": "ux",
+    "severity": "low",
+    "title": "User Experience Issue with Billing Upgrade",
+    "evidence": [
+      2746,
+      2747
+    ],
+    "affected": "user",
+    "explanation": "Users attempting to upgrade to Pro encounter repeated errors, indicating a need for improved UI/UX for billing processes.",
+    "next_step": "Refactor billing upgrade UI to provide clear feedback and handle errors gracefully.",
+    "id": "F004"
+  },
+  {
+    "category": "ux",
+    "severity": "low",
+    "title": "Repeated screen_view events for the same user",
+    "evidence": [
+      3235,
+      3238,
+      3241,
+      3244,
+      3249,
+      3262,
+      3265,
+      3266,
+      3268,
+      3269
+    ],
+    "affected": "user",
+    "explanation": "The same user is repeatedly viewing different screens (dashboard, reports, settings, alerts, device_list) with varying latencies. This could indicate a UI issue, such as repeated taps or incomplete flows, though no specific error is observed.",
+    "next_step": "Investigate repeated screen_view events for user experience issues.",
+    "id": "F005"
+  }
+]

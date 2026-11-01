@@ -1,0 +1,40 @@
+L1: 2026-09-14T08:00:00.326Z INFO  healthcheck    GET /healthz status=200 latency_ms=3
+L2: 2026-09-14T08:00:01.000Z INFO  db             pool=main active=14/50 wait_ms=0
+L3: 2026-09-14T08:00:07.000Z INFO  worker-1       heap_used_pct=50 gc_pause_ms=11
+L4: 2026-09-14T08:00:09.000Z INFO  worker-2       heap_used_pct=63 gc_pause_ms=10
+L5: 2026-09-14T08:00:12.763Z INFO  client-android user=u_3358 sess=s_79514 event=screen_view screen=settings load_ms=253 app_version=3.4.0
+L6: 2026-09-14T08:00:28.774Z INFO  api            req=ada75d user=u_2852 sess=s_23843 POST /api/v1/login status=200 latency_ms=183
+L7: 2026-09-14T08:00:47.429Z INFO  api            req=12fb24 user=u_4796 sess=s_21797 GET /api/v1/me status=200 latency_ms=53
+L8: 2026-09-14T08:00:55.959Z INFO  sensor-gw      device=esp32-16 msgs=16 last_seen_s=3
+L9: 2026-09-14T08:01:00.306Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+L10: 2026-09-14T08:01:15.954Z INFO  client-android user=u_2032 sess=s_72779 event=screen_view screen=dashboard load_ms=1275 app_version=3.4.0
+L11: 2026-09-14T08:01:32.784Z INFO  sensor-gw      device=esp32-35 msgs=7 last_seen_s=8
+L12: 2026-09-14T08:01:43.971Z INFO  api            req=3fe651 user=u_1259 sess=s_11491 POST /api/v1/login status=200 latency_ms=106
+L13: 2026-09-14T08:02:00.170Z INFO  healthcheck    GET /healthz status=200 latency_ms=4
+L14: 2026-09-14T08:02:05.481Z INFO  api            req=8df339 user=u_3991 sess=s_90472 GET /api/v1/dashboard status=200 latency_ms=365
+L15: 2026-09-14T08:02:21.001Z INFO  client-android user=u_1284 sess=s_57340 event=screen_view screen=reports load_ms=568 app_version=3.4.0
+L16: 2026-09-14T08:02:43.403Z INFO  api            req=a0836f user=u_3637 sess=s_92060 PATCH /api/v1/devices/esp32-27/settings status=200 latency_ms=227
+L17: 2026-09-14T08:02:56.292Z INFO  client-android user=u_3760 sess=s_25089 event=screen_view screen=device_list load_ms=523 app_version=3.4.1
+L18: 2026-09-14T08:03:00.213Z INFO  healthcheck    GET /healthz status=200 latency_ms=6
+L19: 2026-09-14T08:03:10.654Z INFO  client-web     user=u_4540 sess=s_66477 event=screen_view screen=reports load_ms=378
+L20: 2026-09-14T08:03:17.196Z INFO  api            req=a4e066 user=u_1553 sess=s_85510 GET /api/v1/devices/esp32-54/readings?range=24h status=200 latency_ms=290
+L21: 2026-09-14T08:03:24.512Z INFO  client-web     user=u_1591 sess=s_58798 event=screen_view screen=settings load_ms=836
+L22: 2026-09-14T08:03:43.508Z INFO  api            req=bbe3f4 user=u_3907 sess=s_83671 GET /api/v1/dashboard status=200 latency_ms=271
+L23: 2026-09-14T08:03:52.585Z INFO  api            req=123d20 user=u_3257 sess=s_75341 GET /api/v1/dashboard status=200 latency_ms=392
+L24: 2026-09-14T08:04:00.391Z INFO  healthcheck    GET /healthz status=200 latency_ms=6
+L25: 2026-09-14T08:04:03.514Z INFO  sensor-gw      device=esp32-46 msgs=10 last_seen_s=7
+L26: 2026-09-14T08:04:18.233Z INFO  api            req=4233e7 user=u_1542 sess=s_45914 GET /api/v1/alerts status=200 latency_ms=131
+L27: 2026-09-14T08:04:34.410Z INFO  api            req=fd4aec user=u_4549 sess=s_20245 GET /api/v1/alerts status=200 latency_ms=184
+L28: 2026-09-14T08:04:44.647Z INFO  client-android user=u_2548 sess=s_73295 event=screen_view screen=alerts load_ms=1543 app_version=3.4.1
+L29: 2026-09-14T08:05:00.092Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+L30: 2026-09-14T08:05:01.000Z INFO  db             pool=main active=10/50 wait_ms=0
+L31: 2026-09-14T08:05:02.100Z WARN  scheduler      job=nightly-backup step=upload attempt=1/3 error="connection reset by peer" retry_in_s=30
+L32: 2026-09-14T08:05:02.751Z INFO  api            req=4fb085 user=u_3909 sess=s_20721 PATCH /api/v1/devices/esp32-35/settings status=200 latency_ms=151
+L33: 2026-09-14T08:05:10.660Z INFO  api            req=a79273 user=u_4907 sess=s_47906 POST /api/v1/login status=200 latency_ms=238
+L34: 2026-09-14T08:05:23.025Z INFO  api            req=de9c45 user=u_4129 sess=s_43420 GET /api/v1/devices/esp32-57/readings?range=7d status=200 latency_ms=801
+L35: 2026-09-14T08:05:30.544Z INFO  api            req=b128a8 user=u_4661 sess=s_63874 POST /api/v1/login status=200 latency_ms=244
+L36: 2026-09-14T08:05:33.400Z INFO  scheduler      job=nightly-backup step=upload attempt=2/3 status=ok bytes=184220311
+L37: 2026-09-14T08:05:41.700Z INFO  api            req=1ac9ca user=u_2882 sess=s_80590 GET /api/v1/devices/esp32-60/readings?range=24h status=200 latency_ms=592
+L38: 2026-09-14T08:05:53.569Z INFO  client-android user=u_4583 sess=s_68896 event=screen_view screen=device_detail load_ms=1205 app_version=3.4.0
+L39: 2026-09-14T08:06:00.285Z INFO  healthcheck    GET /healthz status=200 latency_ms=2
+L40: 2026-09-14T08:06:06.156Z INFO  sensor-gw      device=esp32-41 msgs=17 last_seen_s=4

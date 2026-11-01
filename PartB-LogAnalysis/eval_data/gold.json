@@ -1,0 +1,33 @@
+[
+  {
+    "window": "window_1",
+    "start_line": 1,
+    "end_line": 40,
+    "gold": [
+      {
+        "category": "technical",
+        "evidence": [31, 36]
+      }
+    ],
+    "labeled_by_human": true
+  },
+  {
+    "window": "window_2",
+    "start_line": 1641,
+    "end_line": 1680,
+    "gold": [
+      {
+        "category": "technical",
+        "evidence": [1650]
+      }
+    ],
+    "labeled_by_human": true
+  },
+  {
+    "window": "window_3",
+    "start_line": 3281,
+    "end_line": 3320,
+    "gold": [],
+    "labeled_by_human": true
+  }
+]

@@ -1,0 +1,22 @@
+OpenClaw security audit --deep
+User-reported final output after security changes
+Summary: 0 critical · 0 warn · 2 info
+
+INFO summary.attack_surface
+  groups: open=0, allowlist=0
+  tools.elevated: enabled
+  hooks.webhooks: disabled
+  hooks.internal: enabled
+  browser control: enabled
+  trust model: personal assistant (one trusted operator boundary)
+
+INFO models.small_params
+  Small models detected: ollama/qwen3:1.7b and ollama/qwen3:0.6b at defaults and all three agents
+  All entries ok; sandbox=off; web=[off]
+  No web/browser tools detected for these models.
+  Small models are not recommended for untrusted inputs.
+
+Initial audit: 1 critical, 2 warnings, 1 informational.
+After web denylist: 0 critical, 2 warnings, 2 informational.
+After gateway rate limit and session scoping: 0 critical, 0 warnings, 2 informational.
+CAVEAT: audit was run before the later switch from specialist sessions_list to read and before concurrency reduction. Re-run --deep for final submission.

@@ -1,0 +1,148 @@
+{
+  "model": "qwen3:1.7b",
+  "results": {
+    "v1": {
+      "totals": {
+        "hits": 0,
+        "misses": 2,
+        "false_alarms": 1
+      },
+      "windows": [
+        {
+          "window": "window_1",
+          "hits": [],
+          "misses": [
+            {
+              "category": "technical",
+              "evidence": [
+                31,
+                36
+              ]
+            }
+          ],
+          "false_alarms": [],
+          "counts": {
+            "hits": 0,
+            "misses": 1,
+            "false_alarms": 0
+          },
+          "warnings": []
+        },
+        {
+          "window": "window_2",
+          "hits": [],
+          "misses": [
+            {
+              "category": "technical",
+              "evidence": [
+                1650
+              ]
+            }
+          ],
+          "false_alarms": [],
+          "counts": {
+            "hits": 0,
+            "misses": 1,
+            "false_alarms": 0
+          },
+          "warnings": []
+        },
+        {
+          "window": "window_3",
+          "hits": [],
+          "misses": [],
+          "false_alarms": [
+            {
+              "title": "Poor Navigation Between Screens",
+              "evidence": [
+                3313,
+                3314,
+                3315,
+                3316,
+                3317,
+                3318,
+                3319,
+                3320
+              ],
+              "category": "ux"
+            }
+          ],
+          "counts": {
+            "hits": 0,
+            "misses": 0,
+            "false_alarms": 1
+          },
+          "warnings": [
+            "Window 1: discarded finding: Evidence does not contain a relevant technical/UX signal"
+          ]
+        }
+      ]
+    },
+    "v2": {
+      "totals": {
+        "hits": 0,
+        "misses": 2,
+        "false_alarms": 0
+      },
+      "windows": [
+        {
+          "window": "window_1",
+          "hits": [],
+          "misses": [
+            {
+              "category": "technical",
+              "evidence": [
+                31,
+                36
+              ]
+            }
+          ],
+          "false_alarms": [],
+          "counts": {
+            "hits": 0,
+            "misses": 1,
+            "false_alarms": 0
+          },
+          "warnings": [
+            "Window 1: no usable model response: Invalid model JSON: Expecting ',' delimiter"
+          ]
+        },
+        {
+          "window": "window_2",
+          "hits": [],
+          "misses": [
+            {
+              "category": "technical",
+              "evidence": [
+                1650
+              ]
+            }
+          ],
+          "false_alarms": [],
+          "counts": {
+            "hits": 0,
+            "misses": 1,
+            "false_alarms": 0
+          },
+          "warnings": [
+            "Window 1: no usable model response: Invalid model JSON: Expecting ',' delimiter"
+          ]
+        },
+        {
+          "window": "window_3",
+          "hits": [],
+          "misses": [],
+          "false_alarms": [],
+          "counts": {
+            "hits": 0,
+            "misses": 0,
+            "false_alarms": 0
+          },
+          "warnings": [
+            "Window 1: no usable model response: Invalid model JSON: Expecting ',' delimiter"
+          ]
+        }
+      ]
+    }
+  }
+}
