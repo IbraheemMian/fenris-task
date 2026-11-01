@@ -1,3 +1,7 @@
+# Fenris Part A - Coordinator Agent Setup
+
+## 1. AGENTS.md (Coordinator)
+
 @'
 # AGENTS.md - Coordinator
 
@@ -32,6 +36,8 @@ Final report:
 Keep the report concise.
 '@ | docker exec -i openclaw sh -c 'cp /home/node/.openclaw/workspace/AGENTS.md /home/node/.openclaw/workspace/AGENTS.md.backup && cat > /home/node/.openclaw/workspace/AGENTS.md'
 
+## 2. Subagent Delegation Config
+
 @'
 {
   "agents": {
@@ -57,6 +63,8 @@ Keep the report concise.
 }
 '@ | docker exec -i openclaw node dist/index.js config patch --stdin
 
+## 3. Tools Config (Coordinator)
+
 @'
 {
   "agents": {
@@ -78,5 +86,7 @@ Keep the report concise.
   }
 }
 '@ | docker exec -i openclaw node dist/index.js config patch --stdin
+
+## 4. Disable Tool Search
 
 docker exec openclaw node dist/index.js config set tools.toolSearch false

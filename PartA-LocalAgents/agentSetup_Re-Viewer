@@ -1,9 +1,15 @@
+# Fenris Part A - UX Reviewer Agent Setup
+
+## 1. Create Agent
+
 docker exec openclaw node dist/index.js agents add ux-reviewer `
   --workspace /home/node/.openclaw/workspace-ux-reviewer `
   --model ollama/qwen3:1.7b `
   --non-interactive
 
 docker exec openclaw node dist/index.js agents list
+
+## 2. AGENTS.md
 
 @'
 # UX Reviewer
@@ -34,6 +40,8 @@ Output:
 Keep responses short and practical.
 '@ | docker exec -i openclaw sh -c 'cp /home/node/.openclaw/workspace-ux-reviewer/AGENTS.md /home/node/.openclaw/workspace-ux-reviewer/AGENTS.md.backup && cat > /home/node/.openclaw/workspace-ux-reviewer/AGENTS.md'
 
+## 3. SOUL.md
+
 @'
 # SOUL.md - UX Reviewer
 
@@ -49,12 +57,17 @@ You are a user-experience analysis specialist.
 - Return findings to the coordinator.
 '@ | docker exec -i openclaw sh -c 'cp /home/node/.openclaw/workspace-ux-reviewer/SOUL.md /home/node/.openclaw/workspace-ux-reviewer/SOUL.md.backup && cat > /home/node/.openclaw/workspace-ux-reviewer/SOUL.md'
 
+## 4. Disable Bootstrap
 
 docker exec openclaw mv /home/node/.openclaw/workspace-ux-reviewer/BOOTSTRAP.md /home/node/.openclaw/workspace-ux-reviewer/BOOTSTRAP.md.backup
+
+## 5. Tool Profile (Minimal)
 
 docker exec openclaw node dist/index.js config set agents.entries.ux-reviewer.tools.profile minimal
 
 docker exec openclaw node dist/index.js config get agents.entries.ux-reviewer.tools
+
+## 6. Tools Config (Messaging Profile)
 
 @'
 {

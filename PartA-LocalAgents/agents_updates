@@ -1,3 +1,7 @@
+# Fenris Part A - Agent Updates
+
+## 1. Append Log Analysis Priority to AGENTS.md
+
 @'
 ## Log Analysis Priority
 
@@ -10,7 +14,7 @@ Do not invent endpoints, causes, or user actions.
 Return findings directly to the coordinator.
 '@ | docker exec -i openclaw sh -c 'for f in /home/node/.openclaw/workspace-log-analyst/AGENTS.md /home/node/.openclaw/workspace-ux-reviewer/AGENTS.md; do cat >> "$f"; done'
 
-READONLY mode to avoid looking for usable tools.
+## 2. Tools Config (Readonly Mode)
 
 @'
 {
@@ -52,8 +56,8 @@ READONLY mode to avoid looking for usable tools.
 }
 '@ | docker exec -i openclaw node dist/index.js config patch --stdin
 
+## 3. Concurrency Control
 
-trying to control multi interractions:
 @'
 {
   "agents": {

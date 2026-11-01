@@ -1,16 +1,18 @@
-Used docker hub to download the latest images for Ollama and OpenClaw also pull from cmd:
+# Fenris Part A - Local Agents Setup (PowerShell)
+
+## 1. Pull Docker Images
+
 docker pull ollama/ollama
 docker pull openclaw/openclaw
 
-Using Docker to run Ollama on Windows:
+## 2. Ollama - Volume and Container
 
 docker volume create ollama
 
-
-docker run -d \
-  --name ollama \
-  -p 127.0.0.1:11434:11434 \
-  -v ollama:/root/.ollama \
+docker run -d `
+  --name ollama `
+  -p 127.0.0.1:11434:11434 `
+  -v ollama:/root/.ollama `
   ollama/ollama
 
 docker exec -it ollama ollama run qwen3:0.6b
@@ -19,15 +21,16 @@ docker exec -it ollama ollama run qwen3:1.7b
 docker stop ollama
 docker start ollama
 
+## 3. Test Ollama
 
-Test ollama version, models and functionality:
 curl.exe http://localhost:11434/api/version
 curl.exe http://localhost:11434/api/tags
+
 $body = @{
-    model = "qwen3:0.6b"
+    model  = "qwen3:0.6b"
     prompt = "What is 5 + 7? Reply with only the number."
     stream = $false
-    think = $false
+    think  = $false
 } | ConvertTo-Json
 
 $response = Invoke-RestMethod `
@@ -38,20 +41,14 @@ $response = Invoke-RestMethod `
 
 $response.response
 
-Docker Network:
+## 4. Docker Network
 
 docker network create ai-network
 docker network connect ai-network ollama
 
-Using Docker to run OpenClaw on Windows:
-
-# $token = [guid]::NewGuid().ToString("N")
-# $token | Set-Content "$HOME\.openclaw-gateway-token"
-# $token = (Get-Content "$HOME\.openclaw-gateway-token" -Raw).Trim()
+## 5. OpenClaw - Volume and Configuration
 
 docker volume create openclaw
-
-seting up OpenClaw to use local gateway mode and bind to LAN:
 
 docker run --rm `
   -v openclaw:/home/node/.openclaw `
@@ -59,31 +56,23 @@ docker run --rm `
   openclaw/openclaw `
   dist/index.js config set gateway.mode local
 
-
 docker run --rm `
   -v openclaw:/home/node/.openclaw `
   --entrypoint node `
   openclaw/openclaw `
   dist/index.js config set gateway.bind lan
 
-Running OpenClaw:
+## 6. OpenClaw - Onboard (Token Setup)
 
-docker run -d `
-  --name openclaw `
-  --network ai-network `
-  --restart unless-stopped `
-  --init `
-  -p 127.0.0.1:18789:18789 `
-  -e OLLAMA_API_KEY=ollama-local `
-  -v openclaw:/home/node/.openclaw `
-  --entrypoint node `
-  openclaw/openclaw `
-  dist/index.js gateway --bind lan --port 18789
+$tokenFile = "$HOME\.openclaw-gateway-token"
+if (Test-Path $tokenFile) {
+    $token = (Get-Content $tokenFile -Raw).Trim()
+} else {
+    $token = [guid]::NewGuid().ToString("N")
+    Set-Content $tokenFile $token
+}
 
-
-Setup:
-
-$tokenFile = "$HOME\.openclaw-gateway-token"; if (Test-Path $tokenFile) { $token = (Get-Content $tokenFile -Raw).Trim() } else { $token = [guid]::NewGuid().ToString("N"); Set-Content $tokenFile $token }; docker run --rm -it `
+docker run --rm -it `
   --network ai-network `
   -v openclaw:/home/node/.openclaw `
   -e OPENCLAW_GATEWAY_TOKEN=$token `
@@ -92,9 +81,11 @@ $tokenFile = "$HOME\.openclaw-gateway-token"; if (Test-Path $tokenFile) { $token
   openclaw/openclaw `
   dist/index.js onboard --mode local --no-install-daemon
 
-Running:
+## 7. Run OpenClaw Gateway
 
-$token = (Get-Content "$HOME\.openclaw-gateway-token" -Raw).Trim(); docker run -d `
+$token = (Get-Content "$HOME\.openclaw-gateway-token" -Raw).Trim()
+
+docker run -d `
   --name openclaw `
   --network ai-network `
   --restart unless-stopped `

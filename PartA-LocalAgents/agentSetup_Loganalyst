@@ -1,3 +1,6 @@
+# Fenris Part A - Log Analyst Agent Setup
+
+## 1. Create Agent
 
 docker exec openclaw node dist/index.js agents add log-analyst `
   --workspace /home/node/.openclaw/workspace-log-analyst `
@@ -6,9 +9,7 @@ docker exec openclaw node dist/index.js agents add log-analyst `
 
 docker exec openclaw node dist/index.js agents list
 
-
-
-Setting AJENT.md
+## 2. AGENTS.md
 
 @'
 # Log Analyst
@@ -39,10 +40,7 @@ Output:
 Keep responses short and factual.
 '@ | docker exec -i openclaw sh -c 'cp /home/node/.openclaw/workspace-log-analyst/AGENTS.md /home/node/.openclaw/workspace-log-analyst/AGENTS.md.backup && cat > /home/node/.openclaw/workspace-log-analyst/AGENTS.md'
 
-
-docker exec openclaw node dist/index.js config set agents.entries.log-analyst.tools.profile minimal
-
-docker exec openclaw node dist/index.js config get agents.entries.log-analyst.tools
+## 3. SOUL.md
 
 @'
 # SOUL.md - Log Analyst
@@ -60,9 +58,17 @@ You are a technical log-analysis specialist.
 - Return findings to the coordinator.
 '@ | docker exec -i openclaw sh -c 'cp /home/node/.openclaw/workspace-log-analyst/SOUL.md /home/node/.openclaw/workspace-log-analyst/SOUL.md.backup && cat > /home/node/.openclaw/workspace-log-analyst/SOUL.md'
 
+## 4. Tool Profile (Minimal)
+
+docker exec openclaw node dist/index.js config set agents.entries.log-analyst.tools.profile minimal
+
+docker exec openclaw node dist/index.js config get agents.entries.log-analyst.tools
+
+## 5. Disable Bootstrap
+
 docker exec openclaw mv /home/node/.openclaw/workspace-log-analyst/BOOTSTRAP.md /home/node/.openclaw/workspace-log-analyst/BOOTSTRAP.md.backup
 
-
+## 6. Tools Config (Messaging Profile)
 
 @'
 {
@@ -78,4 +84,3 @@ docker exec openclaw mv /home/node/.openclaw/workspace-log-analyst/BOOTSTRAP.md 
   }
 }
 '@ | docker exec -i openclaw node dist/index.js config patch --stdin
-
