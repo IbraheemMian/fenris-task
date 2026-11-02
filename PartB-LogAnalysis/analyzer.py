@@ -295,11 +295,13 @@ def write_outputs(out: Path, findings: list[dict], warnings: list[str], *,
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Local-only Ollama log analyzer")
+    prompt_versions = ["v1", "v2"]
     parser.add_argument("logfile", type=Path, help="Input app_logs.txt")
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--url", default=DEFAULT_URL)
     parser.add_argument("--out", type=Path, default=Path("output"))
-    parser.add_argument("--prompt", choices=["v1", "v2"], default="v2")
+    parser.add_argument("--prompt",choices=prompt_versions,default=prompt_versions[-1])
+    # parser.add_argument("--prompt", choices=["v1", "v2"], default="v2")
     parser.add_argument("--window-lines", type=int, default=40)
     parser.add_argument("--overlap", type=int, default=8)
     parser.add_argument("--seed", type=int, default=42)
