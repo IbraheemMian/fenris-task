@@ -277,7 +277,7 @@ def write_outputs(out: Path, findings: list[dict], warnings: list[str], *,
     }
     (out / "run_metadata.json").write_text(json.dumps(metadata, indent=2) + "\n", encoding="utf-8")
     labels = Counter(f["category"] for f in findings)
-    report = ["# Daily application log report", "", f"**Findings:** {len(findings)} ({labels['technical']} technical, {labels['ux']} UX).", "",
+    report = ["# Log report", "", f"**Findings:** {len(findings)} ({labels['technical']} technical, {labels['ux']} UX).", "",
               "Findings are model-assisted and require review; severity is indicative.", ""]
     # Avoid copying personal data: only short redacted titles, sanitized explanations and actions.
     for f in findings[:12]:
