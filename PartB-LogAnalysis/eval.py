@@ -1,4 +1,4 @@
-"""Local evaluation: prepare three labeled windows, then score v1 against v2."""
+"""Local evaluation."""
 from __future__ import annotations
 import argparse
 import json

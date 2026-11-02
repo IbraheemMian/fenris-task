@@ -1,4 +1,3 @@
-"""Local-only application log analysis. No agents, hosted APIs or frameworks."""
 from __future__ import annotations
 
 import argparse

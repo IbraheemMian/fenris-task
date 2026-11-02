@@ -1,4 +1,4 @@
-"""Part B entry point; existing repository can keep main.py at its root."""
+"""Part B entry point."""
 from analyzer import main
 
 if __name__ == "__main__":
